@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Section Switcher</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#" data-target="resume" class="active">About</a>
+    <a href="#" data-target="what-i-do">Resume</a>
+    <a href="#" data-target="projects">Projects</a>
+  </div>
+
+  <div class="container">
+    <div class="section visible" id="resume">
+      <div class="intro">
+        <h1 style="font-size: 2.5rem;">Hello!</h1>
+        <div style="display: flex; flex-direction: row; align-items: center;">
+          <p style="position: relative;font-size: 2.5rem; margin-right: 25px;">I'm <span>Gabriel Inculet</span>, a passionate programmer and current Computer Engineering student seeking opportunities to grow and expand technical expertise. Eager to contribute to innovative projects, learn new technologies, and acquire advanced skills in software development.</p>
+          <img src="./dino.jpeg" alt="Dino" class="dino" id="dino">
+        </div>
+        <p>Want to contact me? Reach me at <a href="#" style="color: white;">gabriel.inculet@gmail.com</a></p>
+      </div>
+      <br>
+      <div class="background">
+        <div class="background-header">
+          <h1>Background</h1>
+          <img src="./Photos/Icon_Potion.gif" alt="">
+        </div>
+        <div class="background-text">
+          <p>
+            I’m an aspiring software engineer and passionate programmer currently studying <span>Computer Engineering at ISEC in Coimbra, Portugal</span>. My journey into tech began with a solid background in IT Systems and evolved into a focused pursuit of game development and software engineering through academic projects, internships, and freelance work.
+          </p>
+          <p>
+            From 2022 to 2024, I worked as a freelance <span>game developer</span>, a role that solidified my love for building interactive experiences. I designed and implemented core gameplay systems, optimized performance, and collaborated on intuitive UI features. Game jams and creative side projects have also played a big role in sharpening my skills, pushing me to think critically and solve complex problems in fun and engaging ways.
+          </p>
+          <p>
+            In addition to game development, I’ve contributed to projects across <span>web development and IT support</span>. I’ve built full-stack web applications in team environments, worked with modern tools like <span>React</span>, and handled back-end logic and databases. My internships exposed me to enterprise software like Microsoft Dynamics 365 and helped me develop a practical understanding of scalable, maintainable code.
+          </p>
+        </div>
+        
+      </div>
+      <div class="skills">
+        <div class="title">
+
+        </div>
+        <div class="skills-lists">
+          <ul>
+            <h1>Languages:</h1>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>PHP</li>
+          </ul>
+          <ul>
+            <h1>Frameworks/Tools:</h1>
+            <li>Unity</li>
+            <li>Gamemaker Studio</li>
+            <li>React</li>
+            <li>Node.JS</li>
+            <li>WPF / Winforms</li>
+            <li>Git & Github</li>
+            <li>Trello</li>
+            <li>Figma</li>
+          </ul>
+          <ul>
+            <h1>Fields:</h1>
+            <li>Web Design</li>
+            <li>User Interface & User Experince (UI/UX)</li>
+            <li>Gameplay</li>
+            <li>Gamedesign</li>
+            <li>Scripting</li>
+          </ul>
+        </div>
+        <div id="gameBox">
+          <div id="ship"></div>
+          <div id="alien"></div>
+          <div id="reload" title="Click to restart"></div>
+        </div>
+      </div>
+
+      
+    </div>
+    <div class="section hidden-right" id="what-i-do">
+      <h1>Experience</h1>
+      <h2>INTERNSHIP - WEB DEVELOPER | PrimeLayer <span>APR 2021 – JUN 2021</span></h2>
+      <ul>
+        <li>Participated in a school-led internship program to develop a functional web store using a JavaScript, jQuery and a PHP framework (CodeIgniter 4)</li>
+        <li>Collaborated with peers and mentors to design, develop, and implement core features of the web application.</li>
+        <li>Debugged code and optimized application performance under guidance.</li>
+        <li>Achieved a grading score of <span>19/20.</span></li>
+      </ul>
+      <h2>INTERNSHIP - IT SUPPORT | HELUKABEL <span>DEC 2022 – MAR 2023</span></h2>
+      <ul>
+        <li>Provided IT support for the company’s internal teams, troubleshooting hardware and software issues.</li>
+        <li>Worked with and maintained in-house sales management software and Microsoft Dynamics 365 to ensure seamless operation.</li>
+      </ul>
+      <h2>GAME DEVELOPER | FREELANCE <span>JAN 2022 – JAN 2024</span></h2>
+      <ul>
+        <li>Transformed client Figma designs into functional, enhanced game UIs in Unity, improving the original concepts and integrating all requested features.</li>
+        <li>Contributed to gameplay mechanics, UI optimization, and debugging, ensuring a seamless and engaging user experience across in-game systems.</li>
+      </ul>
+
+      <h1>Education</h1>
+      <h2>IT SYSTEMS TECHNICIAN – AVELAR BROTERO <span>2019-2021 </span></h2>
+      <ul>
+        <li>Learned fundaments of programming, web development and systems management</li>
+        <li><span>Final grade: 16/20</span></li>
+      </ul>
+      <h2>COMPUTER ENGINEERING - ISEC <span>2023-PRESENT</span></h2>
+      <ul>
+        <li>Currently pursuing a degree focused on programming, system architecture, and software development.</li>
+      </ul>
+    </div>
+    <div class="section hidden-right" id="projects">
+      <div class="game">
+        <div class="game-text">
+          <h1>Work in progress game</h1>
+          <p>Working on a game, you ask? Oh, it's a real gem — and by "gem" I mean a slightly chaotic, entirely browser-powered life simulator made with nothing but JavaScript, HTML, and CSS.</p>
+          <p>No engines. No frameworks. Just raw code and caffeine. </p>
+          <p>What's it about? Well, imagine a world where you can chat with simulated people, get a barely-paying job, forget to eat, then spiral into a late-night binge of fake cat videos on your fake phone. It's like real life, but dumber. And that’s the point.</p>
+          <p>Based on <a href="https://adelfaure.net/tools/ascii_facemaker/" target="_blank">ASCII FaceMaker</a> by <a href="https://adelfaure.net/" target="_blank">Adel Faure</a></p>  
+        </div>
+        <div class="game-image">
+          <h1 style="width: 40%; margin: auto; text-align: center;font-size: 2.5rem;">Peeps!</h1>
+          <div style="display: flex; justify-content: center;">
+            <pre id="pre" style="display: inline-block; white-space: pre;">
+                  
+       .-~~~-.       
+      /       \      
+      !       !      
+     (. o   o .)     
+       \  L  /       
+       |\·-·/|       
+       ! `-' !       
+      /       \      
+ _.-~'         `~-._ 
+'                   `</pre>
+          </div>
+          <p style="text-align: center;">An ASCII life sim where you chat with fake people, work dead-end jobs, neglect self-care, and infinitely scroll on your fake phone — just like real life, but dumber.</p>
+         
+        </div>
+
+      </div>
+ <br>
+      <br>
+      <h1>Photography</h1>
+      <p>
+        Check me out on my instagram for more photos: <a href="https://www.instagram.com/planned_hysteria/" target="_blank" style="color: white;">instagram.com/planned_hysteria</a> 
+      </p>
+      <p>
+        Camera: Canon EOS 700D
+      </p>
+      <div class="gallery" id="gallery"></div>
+    </div>
+    <div class="lightbox" id="lightbox">
+      <img id="lightbox-img" src="" alt="Enlarged image">
+    </div>
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'JGS5';
+    src: url('jgs5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html, body {
+    font-family: jgs5;
+    background: #222222;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: #b6b6b6;
+  }
+  h1, h2 {
+    color: white;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-family: jgs5;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav a {
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+  }
+
+  .nav a.active {
+    text-decoration: underline;
+    font-size: 1.65rem;
+  }
+
+  .container {
+    position: relative;
+    flex: 1;
+    width: 90%;
+    max-width: 2000px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    border: white;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+
+  .section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  span 
+  {
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+  }
+
+  .hidden-left {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .hidden-right {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  #pre {
+    margin: auto;
+  }
+
+  .intro {
+    padding: 120px 100px;
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal columns */
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: 100%; /* Ensure the image stretches to fit the width */
+    max-height: 500px; /* Limit the height to 200px */
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox styles */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+  }
+
+  .game {
+    display: flex;
+    height: 60vh;
+    padding: 120px 100px;
+    align-items: center;
+  }
+
+  .game-text {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: white;
+  }
+
+  .background {
+    padding: 120px 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .background-text {
+    font-size: 1.25rem;
+    width: 50%
+  }
+
+  .background img {
+    width: 75px;
+  }
+
+  .background-header {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dino {
+    cursor: pointer;
+    width: 150px;
+    bottom: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .dino.jump {
+    animation: jumpAnim 0.6s ease;
+  }
+
+  .skills {
+    padding: 120px 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .skills-lists {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  #gameBox {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    border: 5px solid white;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    font-size: 1.25rem;
+  }    
+
+  #ship {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: url('./Photos/ship.png') no-repeat center/contain;
+  }
+  #alien {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: url('./Photos/alien.png') no-repeat center/contain;
+  }
+  .projectile {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #reload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: url('Photos/reload.png') no-repeat center/contain;
+    transform: translate(-50%, -50%);
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  #alien.explode {
+    background-image: url('./Photos/explosion.png') !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: explodeAnim 0.4s ease-out forwards;
+  }
+  
+  @keyframes explodeAnim {
+    0% { opacity: 1; }
+    100% {opacity: 0; }
+  }
+
+  /* For Chrome, Safari, Edge */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;  /* Dark background */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #444;      /* Subtle thumb color */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;      /* Slightly lighter on hover */
+  }
+
+  /* For Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+  }
+
+  @keyframes jumpAnim {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-80px); }
+    60%  { transform: translateY(-80px); }
+    100% { transform: translateY(0); }
+  }
+
+
+  @media (max-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 columns on smaller screens */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+  }
